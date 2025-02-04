@@ -26,7 +26,7 @@ jobs:
         run: cd scripts && ls -la
               
       - name: cd & execute scripts
-        run: cd /scripts/android/ && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && cd .. && java -cp "./guava-33.4.0-jre.jar" Main.java
+        run: cd scripts && cd android && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && cd .. && java -cp "./guava-33.4.0-jre.jar" Main.java
 #        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
 
       - name: cd & ls -la

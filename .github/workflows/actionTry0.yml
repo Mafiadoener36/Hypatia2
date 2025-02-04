@@ -19,11 +19,11 @@ jobs:
       - name: ls -la
         run: ls -la
         
-#      - name: fresh start - remove all old files
-#        run: find . -maxdepth 1 -type f ! -name ".github" -exec rm -rf {} \;
+      - name: cd & execute scripts
+        run: cd scripts && java Main.java
 
-#      - name: ls -la
-#        run: ls -la
+      - name: ls -la
+        run: ls -la
 
 #      - name: clone1
 #        run: git clone -b main --single-branch "https://github.com/.git" dir0

@@ -29,7 +29,7 @@ jobs:
         run: echo $PWD
         
       - name: runAllSh
-        run: sudo find /home/runner/work/Hypatia2/Hypatia2/scripts/ -type f -iname "*.sh" -exec chmod +x {} \; && sudo ./grabAndSort.sh       
+        run: sudo find /home/runner/work/Hypatia2/Hypatia2/scripts/ -type f -iname "*.sh" -exec chmod +x {} \; && sudo /home/runner/work/Hypatia2/Hypatia2/grabAndSort.sh       
                     
       - name: cd & execute scripts
         run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java /home/runner/work/Hypatia2/Hypatia2/scripts/

@@ -34,7 +34,7 @@ jobs:
 #        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
 
       - name: del guava
-        run: rm -rf ./guava-33.4.0-jre.jar
+        run: rm -rf ./scripts/guava-33.4.0-jre.jar
       
       - name: cd & ls -la
         run: cd scripts && ls -la

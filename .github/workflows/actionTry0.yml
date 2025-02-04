@@ -24,7 +24,10 @@ jobs:
       
       - name: cd & list filestructure
         run: cd scripts && ls -la
-              
+
+      - name: echo pwd
+        run: echo $PWD
+                    
       - name: cd & execute scripts
         run: cd scripts && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && ls -la && java -cp "./guava-33.4.0-jre.jar" Main.java ./avast-covid19.sha256
 #        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
@@ -32,9 +35,6 @@ jobs:
       - name: cd & ls -la
         run: cd scripts && ls -la
 
-#      - name: clone2
-#        run: git clone -b main --single-branch "https://github.com/.git" dir1
-      
 #      - name: list filestructure
 #        run: ls -la
       

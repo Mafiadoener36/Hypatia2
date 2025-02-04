@@ -1,3 +1,0 @@
-* Switch database from HashMap to BloomFilter
-* This dramatically reduces memory usage
-* Raise mimimum required Android version to KitKat

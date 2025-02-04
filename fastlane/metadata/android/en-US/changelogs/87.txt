@@ -1,2 +1,0 @@
-* Enables strict gradle dependency verification
-* Themed app icon

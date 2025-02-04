@@ -1,2 +1,0 @@
-* Add the Italian README, credit Petra Mirelli
-* Add the Spanish translations, credit Petra Mirelli

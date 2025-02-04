@@ -1,2 +1,0 @@
-* Invert the fileHashes* HashMaps
-* Translation work

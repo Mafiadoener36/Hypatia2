@@ -1,1 +1,0 @@
-* Crash fix when scanning apps in some cases

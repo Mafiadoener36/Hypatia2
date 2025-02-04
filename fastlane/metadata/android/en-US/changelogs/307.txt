@@ -1,4 +1,0 @@
-* Added Czech translations from @Fjuro
-* Updated Russian translations from @t1011
-* Updated Spanish translations from @gallegonovato
-* Updated Turkish translations from @cardpuncher

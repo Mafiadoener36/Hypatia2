@@ -1,2 +1,0 @@
-* Better normalize all hashes
-* Self-test function to ensure databases are correctly loaded

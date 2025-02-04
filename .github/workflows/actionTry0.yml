@@ -22,14 +22,14 @@ jobs:
       - name: cd & get guave googloe deps
         run: cd scripts && wget https://repo1.maven.org/maven2/com/google/guava/guava/33.4.0-jre/guava-33.4.0-jre.jar
       
-      - name: list filestructure
-        run: ls -la
+      - name: cd & list filestructure
+        run: cd scripts && ls -la
               
-      - name: execute scripts
-        run: java Main.java
+      - name: cd & execute scripts
+        run: cd scripts && java Main.java
 
-      - name: ls -la
-        run: ls -la
+      - name: cd & ls -la
+        run: cd scripts && ls -la
 
 #      - name: clone2
 #        run: git clone -b main --single-branch "https://github.com/.git" dir1

@@ -29,7 +29,7 @@ jobs:
         run: echo $PWD
                     
       - name: cd & execute scripts
-        run: cd scripts && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && ls -la && java -cp "./guava-33.4.0-jre.jar" Main.java ./avast-covid19.sha256
+        run: cd scripts && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && ls -la && java -cp "./guava-33.4.0-jre.jar" Main.java /home/runner/work/Hypatia2/Hypatia2/scripts/avast-covid19.sha256
 #        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
 
       - name: cd & ls -la

@@ -29,15 +29,16 @@ jobs:
         run: echo $PWD
                     
       - name: cd & execute scripts
-        run: cd scripts && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && ls -la && java -cp "./guava-33.4.0-jre.jar" Main.java /home/runner/work/Hypatia2/Hypatia2/scripts/
+        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java /home/runner/work/Hypatia2/Hypatia2/scripts/
+#        run: cd scripts && tail -n +2 */*.csv | sed 's/,/ , /' | awk '{ print $1 }' | sort -u  >> avast-covid19.sha256 && ls -la && java -cp "./guava-33.4.0-jre.jar" Main.java /home/runner/work/Hypatia2/Hypatia2/scripts/
 #        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
 
+      - name: del guava
+        run: rm -rf ./guava-33.4.0-jre.jar
+      
       - name: cd & ls -la
         run: cd scripts && ls -la
 
-#      - name: list filestructure
-#        run: ls -la
-      
 #      - name: merge
 #        run: rsync -i -a ./revanced-patches2/ ./revanced-patches/
         

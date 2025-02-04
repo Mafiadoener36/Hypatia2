@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Installing Dependencies
-        run: sudo apt-get install -y git && sudo apt-get install -y libguava-java
+        run: sudo apt-get install -y git && sudo apt-get install -y libguava-java clamav-freshclam
         
       - name: ls -la
         run: ls -la
@@ -26,7 +26,8 @@ jobs:
         run: cd scripts && ls -la
               
       - name: cd & execute scripts
-        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
+        run: cd scripts && ./0avast-covid19.sh && java -cp "./guava-33.4.0-jre.jar" Main.java
+#        run: cd scripts && java -cp "./guava-33.4.0-jre.jar" Main.java
 
       - name: cd & ls -la
         run: cd scripts && ls -la

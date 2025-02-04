@@ -91,8 +91,28 @@ public class Main {
             }
         }
 
-        System.out.println("NOT Processing exclusions:");
-
+        System.out.println("Processing exclusions:");
+        File[] exclusions = new File(args[0] + "../exclusions/").listFiles();
+        Arrays.sort(exclusions);
+        for (File exclusionDatabase : exclusions) {
+            try {
+                System.out.println("\t" + exclusionDatabase.getName());
+                Scanner s = new Scanner(exclusionDatabase);
+                while (s.hasNextLine()) {
+                    String line = s.nextLine().trim().toLowerCase();
+                    if (line.contains(":")) {
+                        line = line.split(":")[0];
+                    }
+                    if (!line.startsWith("#") && isHexadecimal(line) && (line.length() == 32 || line.length() == 40 || line.length() == 64)) {
+                        arrExclusions.add(line);
+                        //System.out.println("\t\tAdded: " + line);
+                    }
+                }
+                s.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
         System.out.println("\tLoaded " + arrExclusions.size() + " excluded hashes");
 
         int amtDomainsRead = 0;
